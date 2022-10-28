@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: linear-gradient(rgba(116,64,139,1), rgba(53,34,61,1));
+	background-attachment: fixed;
+	color: rgba(242,226,196,1);
+	font-family: myriad-pro,sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
