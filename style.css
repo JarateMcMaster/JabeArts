@@ -48,7 +48,8 @@ input[type="radio"] {
 
 .filters{
 	text-align: center;
-	margin-bottom: 2rem;
+	margin-bottom: 0.25rem;
+	margin-top: 1rem;
 }
 
 .filters * {
@@ -71,6 +72,15 @@ input[type="radio"] {
 
 .filters label:hover {
 	text-decoration: underline;
+}
+
+#seperator {
+	height: 0.2rem;
+	width: 24%;
+	margin-left: 38%;
+	margin-bottom: 1rem;
+	text-align: center;
+	background-color: rgba(242,226,196,1);
 }
 
 .posts {
@@ -188,10 +198,14 @@ input[type="radio"] {
 	text-decoration: underline;
 }
 
+#watermark {
+	margin: 1rem;
+	margin-top: 10rem;
+}
+
 .footer {
 	background-color: rgba(242,226,196,1);
 	color: rgba(116,64,139,1);
 	width: 100%;
 	height: 5rem;
-	margin-top: 10rem;
 }
