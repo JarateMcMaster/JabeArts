@@ -63,6 +63,10 @@ input[type="radio"] {
 	line-height: normal;
 	cursor: pointer;
 	transition: all 0.1s;
+	font-family: "Myriad Pro";
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.5rem;
 }
 
 .filters label:hover {
@@ -100,7 +104,7 @@ input[type="radio"] {
 }
 
 .posts .post:hover {
-	border: 0.2rem solid rgba(0,0,0,0.5);
+	border: 0.2rem solid rgba(53,34,61,1);
 }
 
 .posts img {
@@ -135,7 +139,7 @@ input[type="radio"] {
 	position: relative;
 	bottom: 8rem;
 	text-align: center;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(53,34,61,1);
 	height: 8rem;
 }
 
