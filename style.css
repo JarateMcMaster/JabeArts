@@ -13,16 +13,18 @@ body {
 	font-family: myriad-pro,sans-serif;
 	font-weight: 400;
 	font-style: normal;
+	box-sizing: border-box;
 }
 
 .header {
 	background-color: rgba(242,226,196,1);
 	color: rgba(116,64,139,1);
 	width: 100%;
-	height: 10%;
+	height: 3rem;
 	position: sticky;
 }
 
+/*
 #nav_bar { 
 	left: 50%;
 }
@@ -37,3 +39,107 @@ body {
 	display:inline;
 	font-size: 14px;
 }
+*/
+
+input[type="radio"] {
+	position: absolute;
+	left:-9999px;
+}
+
+.filters{
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.filters * {
+	display: inline-block;
+}
+
+.filters label {
+	padding: 0.5rem 1rem;
+	margin-bottom: 0.25rem;
+	border-radius: 2rem;
+	min-width: 50px;
+	line-height: normal;
+	cursor: pointer;
+	transition: all 0.1s;
+}
+
+.filters label:hover {
+	text-decoration: underline;
+}
+
+.posts {
+	display: grid;
+	grid-gap: 1.5rem;
+	grid-template-columns: repeat(4, 1fr); 
+}
+
+.posts .post {
+	background: #fafafa;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.posts .post-title {
+	font-size: 1.3rem;
+}
+
+.posts .post-title:hover {
+	text-decoration: underline;
+}
+
+.posts img {
+	width: 20rem;
+	height: 20rem;
+	object-fit: cover;
+}
+
+.posts figcaption {
+	padding: 1rem;
+}
+
+.posts .post-categories {
+	margin-bottom: 0.75rem;
+	font-size: .75rem;
+}
+
+.posts .post-categories * {
+	display: inline-block;
+}
+
+.posts .post-categories li {
+	margin-bottom: 0.2rem;
+}
+
+.posts .post-categories a {
+	padding: 0.2rem 0.5rem;
+	border-radius: 1rem;
+	border: 1px solid;
+	line-height: normal;
+	background: all 0.1s;
+}
+
+.posts .post-categories a:hover{
+	background-color: green;
+	color: white;
+}
+
+[value="All"]:checked ~ .posts [data-category] {
+	display: block;
+}
+
+[value="Illustration"]:checked ~ .posts .post:not([data-category~="Illustration"]), 
+[value="Digital"]:checked ~ .posts .post:not([data-category~="Digital"]), 
+[value="Sketches"]:checked ~ .posts .post:not([data-category~="Sketches"]), 
+[value="CharDesign"]:checked ~ .posts .post:not([data-category~="CharDesign"]) {
+	display: none;
+}
+
+[value="All"]:checked ~ .filters [for="All"], 
+[value="Illustration"]:checked ~ .filters [for="Illustration"], 
+[value="Digital"]:checked ~ .filters [for="Digital"], 
+[value="Sketches"]:checked ~ .filters [for="Sketches"], 
+[value="CharDesign"]:checked ~ .filters [for="CharDesign"] {
+	text-decoration: underline;
+}
+
