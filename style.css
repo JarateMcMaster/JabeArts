@@ -71,31 +71,72 @@ input[type="radio"] {
 
 .posts {
 	display: grid;
-	grid-gap: 1.5rem;
+	grid-gap: 1rem;
 	grid-template-columns: repeat(4, 1fr); 
+	align-items: center;
+	justify-items: center;
 }
 
 .posts .post {
-	background: #fafafa;
-	border: 1px solid rgba(0, 0, 0, 0.1);
+	/* background: #fafafa;
+	border: 1px solid rgba(0, 0, 0, 0.1); */
+	height: 24.8rem;
+	width: 24.8rem;
+	border: 0.2rem solid rgba(0,0,0,0);
 }
 
 .posts .post-title {
-	font-size: 1.3rem;
+	font-size: 3rem;
+	padding-top: 0.5rem;
+	padding-left: 0.5rem;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
-.posts .post-title:hover {
-	text-decoration: underline;
+.posts .post-date {
+	font-size: 2rem;
+	padding-bottom: 0.5rem;
+}
+
+.posts .post:hover {
+	border: 0.2rem solid rgba(0,0,0,0.5);
 }
 
 .posts img {
-	width: 20rem;
-	height: 20rem;
+	width: 24.8rem;
+	height: 24.8rem;
 	object-fit: cover;
 }
 
+.post-break {
+	height: 0.2rem;
+	width: 60%;
+	margin-left: 20%;
+	text-align: center;
+	background-color: rgba(0,0,0,0);
+}
+
+.posts .post:hover .post-break {
+	background-color: rgba(242,226,196,1);
+}
+
 .posts figcaption {
-	padding: 1rem;
+	color: rgba(0,0,0,0);
+	position: relative;
+	bottom: 8rem;
+	text-align: center;
+	background-color: rgba(0,0,0,0);
+	height: 8rem;
+}
+
+.posts .post:hover figcaption {
+	color: rgba(242,226,196,1);
+	position: relative;
+	bottom: 8rem;
+	text-align: center;
+	background-color: rgba(0,0,0,0.5);
+	height: 8rem;
 }
 
 .posts .post-categories {
