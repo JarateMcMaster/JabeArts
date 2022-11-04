@@ -4,9 +4,11 @@
 *, *::before, *::after {
 	margin: 0;
 	padding: 0;
+	border: 0;
 }
 
 body {
+	position: relative;
 	background: linear-gradient(rgba(116,64,139,1), rgba(53,34,61,1));
 	background-attachment: fixed;
 	color: rgba(242,226,196,1);
@@ -21,7 +23,8 @@ body {
 	color: rgba(116,64,139,1);
 	width: 100%;
 	height: 3rem;
-	position: sticky;
+	position: fixed;
+	top: 0;
 }
 
 /*
@@ -49,7 +52,7 @@ input[type="radio"] {
 .filters{
 	text-align: center;
 	margin-bottom: 0.25rem;
-	margin-top: 1rem;
+	margin-top: 4rem;
 }
 
 .filters * {
